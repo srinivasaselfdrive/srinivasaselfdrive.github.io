@@ -1,230 +1,413 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Srinivasa Self Drives | Premium Self Drive Cars in Hyderabad</title>
+<!DOCTYPE html><html lang="en">  <head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <title>Srinivasa Self Drives | Premium Self Drive Cars in Hyderabad</title>  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">  <!-- Font Awesome for icons -->  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />  <style>  
+    body {  
+      margin: 0;  
+      font-family: 'Poppins', sans-serif;  
+      background: #f8f9fb;  
+      color: #222;  
+    }  header {  
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);  
+  color: #fff;  
+  padding: 60px 20px;  
+  text-align: center;  
+}  
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+.logo {  
+  font-size: 34px;  
+  font-weight: 700;  
+  letter-spacing: 1px;  
+}  
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+.tagline {  
+  margin-top: 10px;  
+  font-size: 16px;  
+  font-weight: 300;  
+  opacity: 0.9;  
+}  
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #f8f9fb;
-      color: #222;
-    }
+.cta-buttons {  
+  margin-top: 25px;  
+}  
 
-    header {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      padding: 60px 20px;
-      text-align: center;
-    }
+.cta-buttons a {  
+  display: inline-block;  
+  margin: 8px;  
+  padding: 14px 26px;  
+  border-radius: 50px;  
+  font-size: 15px;  
+  font-weight: 500;  
+  text-decoration: none;  
+  color: #fff;  
+  transition: 0.3s;  
+}  
 
-    .logo {
-      font-size: 34px;
-      font-weight: 700;
-    }
+.call-btn { background: #28a745; }  
+.wa-btn { background: #25D366; }  
 
-    .tagline {
-      margin-top: 10px;
-      font-size: 16px;
-      opacity: 0.9;
-    }
+.cta-buttons a:hover {  
+  transform: translateY(-2px);  
+  opacity: 0.9;  
+}  
 
-    .cta-buttons a {
-      display: inline-block;
-      margin: 10px;
-      padding: 14px 26px;
-      border-radius: 50px;
-      color: #fff;
-      text-decoration: none;
-    }
+section {  
+  padding: 60px 20px;  
+  max-width: 1100px;  
+  margin: auto;  
+}  
 
-    .call-btn { background: #28a745; }
-    .wa-btn { background: #25D366; }
+h2 {  
+  text-align: center;  
+  font-size: 26px;  
+  margin-bottom: 40px;  
+}  
 
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.features {  
+  display: grid;  
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  
+  gap: 25px;  
+}  
 
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+.feature {  
+  background: #fff;  
+  padding: 25px;  
+  border-radius: 14px;  
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);  
+  text-align: center;  
+}  
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-    }
+.feature i {  
+  font-size: 28px;  
+  color: #2c5364;  
+  margin-bottom: 15px;  
+}  
 
-    .feature {
-      background: #fff;
-      padding: 25px;
-      border-radius: 14px;
-      text-align: center;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-    }
+.feature h3 {  
+  font-size: 18px;  
+  margin-bottom: 10px;  
+}  
 
-    footer {
-      background: #111;
-      color: #ccc;
-      padding: 30px;
-      text-align: center;
-    }
+.feature p {  
+  font-size: 14px;  
+  color: #555;  
+}  
 
-    /* Review Form */
-    .review-form {
-      background: #fff;
-      padding: 30px;
-      border-radius: 14px;
-      max-width: 600px;
-      margin: 40px auto;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-    }
+.info-box {  
+  background: #ffffff;  
+  border-radius: 16px;  
+  padding: 40px;  
+  box-shadow: 0 10px 40px rgba(0,0,0,0.06);  
+  text-align: center;  
+}  
 
-    .review-form input,
-    .review-form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-family: 'Poppins', sans-serif;
-    }
+.info-box p {  
+  font-size: 15px;  
+  line-height: 1.8;  
+  color: #444;  
+}  
 
-    .review-form button {
-      width: 100%;
-      margin-top: 20px;
-      padding: 14px;
-      background: #25D366;
-      border: none;
-      border-radius: 50px;
-      color: #fff;
-      font-size: 16px;
-      cursor: pointer;
-    }
+.map {  
+  margin-top: 40px;  
+  border-radius: 16px;  
+  overflow: hidden;  
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);  
+}  
 
-    /* Star Rating */
-    .star-rating {
-      text-align: center;
-      margin-bottom: 10px;
-    }
+iframe {  
+  width: 100%;  
+  height: 350px;  
+  border: 0;  
+}  
 
-    .star-rating input {
-      display: none;
-    }
+footer {  
+  background: #111;  
+  color: #ccc;  
+  padding: 30px 20px;  
+  text-align: center;  
+  font-size: 14px;  
+}  
 
-    .star-rating label {
-      font-size: 30px;
-      color: #ccc;
-      cursor: pointer;
-      padding: 0 5px;
-    }
-
-    .star-rating input:checked ~ label,
-    .star-rating label:hover,
-    .star-rating label:hover ~ label {
-      color: #f4b400;
-    }
-
-    /* Floating WhatsApp */
-    .float-wa {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: #fff;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 26px;
-      text-decoration: none;
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <div class="logo">Srinivasa Self Drives</div>
-  <div class="tagline">Premium Self-Drive Cars • Freedom to Drive Your Way</div>
-  <div class="cta-buttons">
-    <a class="call-btn" href="tel:9515909057">Call Now</a>
-    <a class="wa-btn" href="https://wa.me/919515909057" target="_blank">WhatsApp</a>
-  </div>
-</header>
-
-<section>
-  <h2>Why Choose Us</h2>
-  <div class="features">
-    <div class="feature">Self-Drive Only</div>
-    <div class="feature">Flexible Rentals</div>
-    <div class="feature">Trusted Service</div>
-    <div class="feature">24×7 Support</div>
-  </div>
-</section>
-
-<section>
-  <h2>Submit Your Review</h2>
-
-  <div class="review-form">
-    <div class="star-rating">
-      <input type="radio" id="s5" name="rating" value="5"><label for="s5">★</label>
-      <input type="radio" id="s4" name="rating" value="4"><label for="s4">★</label>
-      <input type="radio" id="s3" name="rating" value="3"><label for="s3">★</label>
-      <input type="radio" id="s2" name="rating" value="2"><label for="s2">★</label>
-      <input type="radio" id="s1" name="rating" value="1"><label for="s1">★</label>
-    </div>
-
-    <input type="text" id="custName" placeholder="Your Name">
-    <textarea id="custReview" placeholder="Write your experience"></textarea>
-
-    <button type="button" onclick="sendReview()">Submit Review via WhatsApp</button>
-  </div>
-</section>
-
-<footer>
-  © 2026 Srinivasa Self Drives • Hyderabad
-</footer>
-
-<a class="float-wa" href="https://wa.me/919515909057" target="_blank">
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
-
-<script>
-function sendReview() {
-  const name = document.getElementById("custName").value.trim();
-  const review = document.getElementById("custReview").value.trim();
-  const ratingInput = document.querySelector('input[name="rating"]:checked');
-
-  if (!name || !review || !ratingInput) {
-    alert("Please fill all fields and select rating");
-    return;
-  }
-
-  const rating = ratingInput.value;
-  const message =
-    `Customer Review%0A` +
-    `Name: ${name}%0A` +
-    `Rating: ${"⭐".repeat(rating)}%0A` +
-    `Review: ${review}`;
-
-  const phone = "919515909057";
-  window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+/* Floating WhatsApp */  
+.float-wa {  
+  position: fixed;  
+  bottom: 20px;  
+  right: 20px;  
+  background: #25D366;  
+  color: #fff;  
+  width: 56px;  
+  height: 56px;  
+  border-radius: 50%;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  font-size: 26px;  
+  text-decoration: none;  
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);  
+  z-index: 999;  
 }
-</script>
 
-</body>
-</html>
+/* Reviews */
+.reviews {
+background: #f8f9fb;
+padding: 40px 20px;
+border-radius: 16px;
+}
+
+.review-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 25px;
+}
+
+.review-card {
+background: #ffffff;
+padding: 25px;
+border-radius: 14px;
+box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.review-card .stars {
+color: #f4b400;
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+.review-card p {
+font-size: 14px;
+color: #444;
+line-height: 1.7;
+}
+
+.review-card h4 {
+margin-top: 12px;
+font-size: 15px;
+font-weight: 600;
+}
+
+/* Review Form */
+.review-form {
+background: #ffffff;
+padding: 30px;
+margin-top: 40px;
+border-radius: 14px;
+max-width: 600px;
+margin-left: auto;
+margin-right: auto;
+box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.review-form input,
+.review-form textarea {
+width: 100%;
+padding: 12px;
+margin-top: 12px;
+border-radius: 8px;
+border: 1px solid #ccc;
+font-family: 'Poppins', sans-serif;
+}
+
+.review-form textarea {
+height: 100px;
+resize: none;
+}
+
+.review-form button {
+margin-top: 20px;
+width: 100%;
+padding: 14px;
+background: #25D366;
+border: none;
+border-radius: 50px;
+color: #fff;
+font-size: 16px;
+cursor: pointer;
+}
+
+/* Clickable Stars */
+.star-rating {
+text-align: center;
+margin-bottom: 10px;
+}
+
+.star-rating .stars {
+display: inline-flex;
+flex-direction: row-reverse;
+}
+
+.star-rating input {
+display: none;
+}
+
+.star-rating label {
+font-size: 30px;
+color: #ccc;
+cursor: pointer;
+padding: 0 5px;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+color: #f4b400;
+}
+</style></head>
+
+<body>  <header>  
+    <div class="logo">Srinivasa Self Drives</div>  
+    <div class="tagline">Premium Self-Drive Cars • Freedom to Drive Your Way</div><div class="cta-buttons">  
+  <a class="call-btn" href="tel:9515909057"><i class="fa fa-phone"></i> Call Now</a>  
+  <a class="wa-btn" href="https://wa.me/919515909057" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>  
+</div>    </header>  <section>  
+    <h2>Why Choose Us</h2>  
+    <div class="features">  
+      <div class="feature">  
+        <i class="fa fa-car"></i>  
+        <h3>Self-Drive Only</h3>  
+        <p>No driver. Complete privacy and freedom.</p>  
+      </div>  
+      <div class="feature">  
+        <i class="fa fa-calendar-day"></i>  
+        <h3>Daily & Weekly Rentals</h3>  
+        <p>Flexible plans that fit your travel needs.</p>  
+      </div>  
+      <div class="feature">  
+        <i class="fa fa-shield"></i>  
+        <h3>Secure & Trusted</h3>  
+        <p>Security deposit with transparent policies.</p>  
+      </div>  
+      <div class="feature">  
+        <i class="fa fa-headset"></i>  
+        <h3>24×7 WhatsApp Support</h3>  
+        <p>Always available for bookings & assistance.</p>  
+      </div>  
+    </div>  
+  </section>  <section>  
+    <div class="info-box">  
+  <h2>What Our Customers Say</h2>    <div class="reviews">  
+    <div class="review-grid">  <div class="review-card">  
+    <div class="stars">★★★★★</div>  
+    <p>  
+      Very smooth experience. Car was clean and well maintained.  
+      Pickup and return process was hassle-free.  
+    </p>  
+    <h4>– Ravi Kumar, Hyderabad</h4>  
+  </div>  
+
+  <div class="review-card">  
+    <div class="stars">★★★★★</div>  
+    <p>  
+      Best self-drive service I’ve used. Transparent pricing and quick  
+      support on WhatsApp.  
+    </p>  
+    <h4>– Anjali Reddy</h4>  
+  </div>  
+
+  <div class="review-card">  
+    <div class="stars">★★★★☆</div>  
+    <p>  
+      Car condition was excellent. No hidden charges.  
+      Will definitely book again.  
+    </p>  
+    <h4>– Suresh M</h4>  
+  </div>  
+
+</div>
+
+  </div>  
+</section>  
+     <div class="review-form">  
+  <h3 style="text-align:center;">Submit Your Review</h3>    <div class="star-rating">  
+    <div class="stars">  
+      <input type="radio" id="s5" name="rating" value="5"><label for="s5">★</label>  
+      <input type="radio" id="s4" name="rating" value="4"><label for="s4">★</label>  
+      <input type="radio" id="s3" name="rating" value="3"><label for="s3">★</label>  
+      <input type="radio" id="s2" name="rating" value="2"><label for="s2">★</label>  
+      <input type="radio" id="s1" name="rating" value="1"><label for="s1">★</label>  
+    </div>  
+  </div>    <input type="text" id="custName" placeholder="Your Name">  
+  <textarea id="custReview" placeholder="Write your experience with Srinivasa Self Drives"></textarea>  <button onclick="sendReview()">Submit Review via WhatsApp</button>
+</div>
+
+  <h2>Serving Hyderabad & Telangana</h2>  
+      <p>  
+        Srinivasa Self Drives offers premium, well-maintained self-drive cars across Hyderabad and Telangana.  
+        Whether it’s a city ride, weekend trip, or long drive, we provide reliable vehicles with simple booking  
+        and professional support. Your journey, your rules.  
+      </p><div class="map">  
+    <!-- Replace src with your exact Google Maps embed link -->  
+        <div class="map">  
+  <iframe   
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1948857.0561080163!2d78.381056!3d17.4424064!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbbd45a6327325%3A0x8e65c9edac0c599f!2sSRINIVASA%20Self%20Drive!5e0!3m2!1sen!2sin!4v1770266834885!5m2!1sen!2sin"  
+    width="100%"  
+    height="350"  
+    style="border:0;"  
+    allowfullscreen=""  
+    loading="lazy"  
+    referrerpolicy="no-referrer-when-downgrade">  
+  </iframe>  
+</div>    </section>  <footer>  
+    © 2026 Srinivasa Self Drives. All Rights Reserved.<br>  
+    Hyderabad • Telangana  
+  </footer>  <a class="float-wa" href="https://wa.me/919515909057" target="_blank">  
+    <i class="fa-brands fa-whatsapp"></i>  
+  </i>  
+  <footer>  
+  <!-- your footer content -->  
+</footer>  <script>  
+document.addEventListener("DOMContentLoaded", function () {  
+  
+  let selectedRating = 0;  
+  
+  window.setRating = function(rating) {  
+    selectedRating = rating;  
+    document.getElementById("rating").value = rating;  
+  
+    document.querySelectorAll(".stars span").forEach((star, index) => {  
+      star.style.color = index < rating ? "gold" : "black";  
+    });  
+  };  
+  
+  const form = document.getElementById("reviewForm");  
+  const list = document.getElementById("reviewsList");  
+  
+  if (!form || !list) {  
+    console.error("Review form or list not found");  
+    return;  
+  }  
+  
+  form.addEventListener("submit", function(e) {  
+    e.preventDefault();  
+  
+    const name = document.getElementById("name").value.trim();  
+    const review = document.getElementById("review").value.trim();  
+  
+    if (name === "" || review === "") {  
+      alert("Please fill all fields");  
+      return;  
+    }  
+  
+    if (selectedRating === 0) {  
+      alert("Please select star rating");  
+      return;  
+    }  
+  
+    const div = document.createElement("div");  
+    div.innerHTML = `  
+      <strong>${name}</strong><br>  
+      ${"⭐".repeat(selectedRating)}  
+      <p>${review}</p>  
+      <hr>  
+    `;  
+  
+    list.appendChild(div);  
+  
+    form.reset();  
+    selectedRating = 0;  
+    document.querySelectorAll(".stars span").forEach(star => star.style.color = "black");  
+  });  
+  
+});  
+</script>  </body>  
+</html> </body>  
+</html>  

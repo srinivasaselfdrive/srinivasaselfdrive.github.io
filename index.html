@@ -369,46 +369,61 @@
   <!-- your footer content -->
 </footer>
 
-<!-- ⭐ REVIEW JAVASCRIPT STARTS HERE -->
 <script>
-let selectedRating = 0;
+document.addEventListener("DOMContentLoaded", function () {
 
-function setRating(rating) {
-  selectedRating = rating;
-  document.getElementById("rating").value = rating;
+  let selectedRating = 0;
 
-  const stars = document.querySelectorAll(".stars span");
-  stars.forEach((star, index) => {
-    star.style.color = index < rating ? "gold" : "black";
-  });
-}
+  window.setRating = function(rating) {
+    selectedRating = rating;
+    document.getElementById("rating").value = rating;
 
-document.getElementById("reviewForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+    document.querySelectorAll(".stars span").forEach((star, index) => {
+      star.style.color = index < rating ? "gold" : "black";
+    });
+  };
 
-  const name = document.getElementById("name").value;
-  const review = document.getElementById("review").value;
+  const form = document.getElementById("reviewForm");
+  const list = document.getElementById("reviewsList");
 
-  if (selectedRating === 0) {
-    alert("Please select a star rating");
+  if (!form || !list) {
+    console.error("Review form or list not found");
     return;
   }
 
-  const reviewDiv = document.createElement("div");
-  reviewDiv.innerHTML = `
-    <strong>${name}</strong><br>
-    ${"⭐".repeat(selectedRating)}
-    <p>${review}</p>
-    <hr>
-  `;
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
 
-  document.getElementById("reviewsList").appendChild(reviewDiv);
+    const name = document.getElementById("name").value.trim();
+    const review = document.getElementById("review").value.trim();
 
-  this.reset();
-  selectedRating = 0;
+    if (name === "" || review === "") {
+      alert("Please fill all fields");
+      return;
+    }
+
+    if (selectedRating === 0) {
+      alert("Please select star rating");
+      return;
+    }
+
+    const div = document.createElement("div");
+    div.innerHTML = `
+      <strong>${name}</strong><br>
+      ${"⭐".repeat(selectedRating)}
+      <p>${review}</p>
+      <hr>
+    `;
+
+    list.appendChild(div);
+
+    form.reset();
+    selectedRating = 0;
+    document.querySelectorAll(".stars span").forEach(star => star.style.color = "black");
+  });
+
 });
 </script>
-<!-- ⭐ REVIEW JAVASCRIPT ENDS HERE -->
 
 </body>
 </html> </body>
